@@ -10,7 +10,7 @@ body{
     max-width: 500px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #2b2a2a;
+    background-color: #1d1d1d;
     border-radius: 10px;
     flex-direction: column;
     box-shadow: 0px 3px 25px azure;
@@ -40,10 +40,11 @@ button{
      margin-right: auto;
      margin-left: auto;
      outline: none;
+    border: none;
 }
 
 .noite{
-    background-color: #2b2a2a;
+    background-color: #000000;
     width: 10vw;
     color: azure;
     border-radius: 8px;
@@ -52,6 +53,7 @@ button{
     margin-right: auto;
     margin-left: auto;
     outline: none;
+    border: none;
 }
 
 .kaidis{
@@ -64,6 +66,7 @@ button{
     margin-right: auto;
     margin-left: auto; 
     outline: none;
+    border: none;
     
 }
 
@@ -77,6 +80,7 @@ button{
     margin-right: auto;
     margin-left: auto;
     outline: none;
+    border: none;
 }
 
 .btnorg{
