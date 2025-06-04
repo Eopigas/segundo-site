@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+    color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #2b2a2a;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0px 3px 25px azure;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Russia{
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    background-color: blue;
+    color: azure;
+     padding: 8px 16px;
+     border-radius: 8px;
+     margin-bottom: 10px;
+     display: block;
+     margin-right: auto;
+     margin-left: auto;
+     outline: none;
+}
+
+.noite{
+    background-color: #2b2a2a;
+    width: 10vw;
+    color: azure;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    outline: none;
+}
+
+.kaidis{
+    background-color: rgb(207, 207, 17);
+    color: black;
+    width: 10vw;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; 
+    outline: none;
+    
+}
+
+.INFP{
+    background-color: red;
+    width: 10vw;
+    color: azure;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    outline: none;
+}
+
+.btnorg{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Russia:hover{
+    transition: 0.5s ease;
+    box-shadow: 0px 3px 30px rgb(0, 105, 190);
+}
+
+.noite:hover{
+    transition: 0.5s ease;
+    box-shadow: 0px 2px 30px azure ;
+}
+
+.kaidis:hover{
+   transition: 0.5s ease;
+    box-shadow: 0px 2px 30px rgb(255, 255, 152); 
+}
+
+.INFP:hover{
+    transition: 0.5s ease;
+    box-shadow: 0px 3px 30px rgb(255, 0, 0);
+}
+
+.imagem{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
