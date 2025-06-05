@@ -6,6 +6,10 @@ body{
     padding: 0;
 }
 
+body*{
+    box-sizing: border-box;
+}
+
 .container{
     max-width: 500px;
     margin: 30px auto;
@@ -31,8 +35,8 @@ button{
 }
 
 .Zerkalo{
-    align-items: center;
-    justify-content: center;
+   
+    
     width: 25vw;
     background-color: blue;
     color: azure;
@@ -115,7 +119,7 @@ button{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50vw;
+    width: 100vw;
 }
 
 @media only screen and (max-width: 930px){
@@ -125,9 +129,19 @@ button{
 }
 
 @media only screen and (max-width: 600px){
+    .imagem{
+
+    }
     .container{
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+       
+    
+        width:80%;
+        height: auto;
+
+    }
+
+    .container{
+        width: 90;
     }
 }
+
