@@ -14,7 +14,10 @@ body{
     border-radius: 10px;
     flex-direction: column;
     box-shadow: 0px 3px 25px azure;
+    width: 35vw;
 }
+
+
 
 h1{
     text-align: center;
@@ -27,7 +30,7 @@ button{
     cursor: pointer;
 }
 
-.Russia{
+.Zerkalo{
     align-items: center;
     justify-content: center;
     width: 25vw;
@@ -40,7 +43,7 @@ button{
      margin-right: auto;
      margin-left: auto;
      outline: none;
-    border: none;
+     border: none;
 }
 
 .noite{
@@ -67,7 +70,6 @@ button{
     margin-left: auto; 
     outline: none;
     border: none;
-    
 }
 
 .INFP{
@@ -89,7 +91,7 @@ button{
     justify-content: center;
 }
 
-.Russia:hover{
+.Zerkalo:hover{
     transition: 0.5s ease;
     box-shadow: 0px 3px 30px rgb(0, 105, 190);
 }
@@ -113,4 +115,19 @@ button{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 50vw;
+}
+
+@media only screen and (max-width: 930px){
+    .container{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
