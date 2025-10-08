@@ -1,4 +1,11 @@
-body{
+/* Estilos gerais */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
     background-color: black;
     color: azure;
     font-family: 'Times New Roman', Times, serif;
@@ -6,142 +13,160 @@ body{
     padding: 0;
 }
 
-body*{
-    box-sizing: border-box;
-}
-
-.container{
+.container {
+    display: flex;
+    flex-direction: column;
     max-width: 500px;
     margin: 30px auto;
     padding: 20px;
     background-color: #1d1d1d;
     border-radius: 10px;
-    flex-direction: column;
-    box-shadow: 0px 3px 25px azure;
     width: 35vw;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+    box-shadow: 0px 3px 25px azure;
+}
+
+/* Camada animada com brilho rainbow */
+.container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+    filter: blur(60px);
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1s ease;
+    z-index: 0;
+    animation: rainbowRotate 6s linear infinite;
+}
+
+/* Ao passar o mouse, o efeito se acende */
+.container:hover::before {
+    opacity: 0.8;
+}
+
+/* Mantém o conteúdo acima do efeito */
+.container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animação de rotação do arco-íris */
+@keyframes rainbowRotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
 }
 
 
-
-h1{
+/* Título */
+h1 {
     text-align: center;
 }
 
-button{
+/* Botões */
+button {
     padding: 8px 16px;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 8px;
 }
 
-.Zerkalo{
-   
-    
+/* Botões personalizados */
+.kaidis {
     width: 25vw;
-    background-color: blue;
-    color: azure;
-     padding: 8px 16px;
-     border-radius: 8px;
-     margin-bottom: 10px;
-     display: block;
-     margin-right: auto;
-     margin-left: auto;
-     outline: none;
-     border: none;
+    background-color: rgb(255, 238, 0);
+    color: rgb(0, 0, 0);
 }
 
-.noite{
+.noite {
     background-color: #000000;
     width: 25vw;
     color: azure;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    outline: none;
-    border: none;
 }
 
-.kaidis{
-    background-color: rgb(207, 207, 17);
-    color: black;
+.Kagami {
+    background-color: rgb(252, 252, 252);
+    color: rgb(255, 0, 0);
     width: 25vw;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; 
-    outline: none;
-    border: none;
 }
 
-.INFP{
+.INFP {
     background-color: red;
     width: 25vw;
     color: azure;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    outline: none;
-    border: none;
 }
 
-.btnorg{
+/* Organização de botões */
+.btnorg {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.Zerkalo:hover{
-    transition: 0.5s ease;
-    box-shadow: 0px 3px 30px rgb(0, 105, 190);
-}
-
-.noite:hover{
-    transition: 0.5s ease;
-    box-shadow: 0px 2px 30px azure ;
-}
-
-.kaidis:hover{
-   transition: 0.5s ease;
-    box-shadow: 0px 2px 30px rgb(255, 255, 152); 
-}
-
-.INFP:hover{
+/* Efeitos hover */
+.Kagami:hover {
     transition: 0.5s ease;
     box-shadow: 0px 3px 30px rgb(255, 0, 0);
 }
 
-.imagem{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100vw;
+.noite:hover {
+    transition: 0.5s ease;
+    box-shadow: 0px 2px 30px azure;
 }
 
-@media only screen and (max-width: 930px){
-    .container{
+.kaidis:hover {
+    transition: 0.5s ease;
+    box-shadow: 0px 2px 30px rgb(255, 255, 152);
+}
+
+.INFP:hover {
+    transition: 0.5s ease;
+    box-shadow: 0px 3px 30px rgb(255, 0, 0);
+}
+
+/* Imagem responsiva */
+.imagem {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 930px) {
+    .container {
         width: 85%;
     }
 }
 
-@media only screen and (max-width: 600px){
-    .imagem{
-
-    }
-    .container{
-       
-    
-        width:80%;
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 80%;
         height: auto;
-
-    }
-
-    .container{
-        width: 90;
     }
 }
-
