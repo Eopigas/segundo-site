@@ -17,15 +17,16 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #1d1d1d;
+    background-color: #000000;
     border-radius: 10px;
-    width: 35vw;
+    width: 30vw;
     position: relative;
     overflow: hidden;
     transition: 0.5s ease;
     box-shadow: 0px 3px 25px azure;
+    
 }
 
 /* Camada animada com brilho rainbow */
@@ -38,21 +39,22 @@ body {
     height: 200%;
     background: conic-gradient(
         from 0deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet,
-        red
+        black,
+        black,
+        black,
+        white,
+        black,
+        black,
+        black,
+        white
+     
     );
-    filter: blur(60px);
+    filter: blur(35px);
     opacity: 0;
     transform: scale(1);
     transition: opacity 1s ease;
     z-index: 0;
-    animation: rainbowRotate 6s linear infinite;
+    animation: rainbowRotate 9s linear infinite;
 }
 
 /* Ao passar o mouse, o efeito se acende */
@@ -103,9 +105,17 @@ button {
 }
 
 .noite {
-    background-color: #000000;
-    width: 25vw;
-    color: azure;
+  background-color: #000000;
+  width: 25vw;
+  color: azure;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  outline: none;
+  border: none;
+  transition: box-shadow 0.5s ease;
 }
 
 .Kagami {
@@ -134,10 +144,25 @@ button {
     box-shadow: 0px 3px 30px rgb(255, 0, 0);
 }
 
-.noite:hover {
-    transition: 0.5s ease;
-    box-shadow: 0px 2px 30px azure;
+.noite:hover::before {
+  opacity: 1;
 }
+
+.noite:hover {
+  animation: rainbowShadow 3s linear infinite;
+}
+
+/* Animação que troca as cores do box-shadow */
+@keyframes rainbowShadow {
+  0%   { box-shadow: 0 0 30px red; }
+  16%  { box-shadow: 0 0 30px orange; }
+  33%  { box-shadow: 0 0 30px yellow; }
+  50%  { box-shadow: 0 0 30px green; }
+  66%  { box-shadow: 0 0 30px blue; }
+  83%  { box-shadow: 0 0 30px indigo; }
+  100% { box-shadow: 0 0 30px violet; }
+}
+
 
 .kaidis:hover {
     transition: 0.5s ease;
